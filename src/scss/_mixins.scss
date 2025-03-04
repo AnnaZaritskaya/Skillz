@@ -1,17 +1,20 @@
+@use "sass:map";
+@use "variables";
+
 // Media Queries
 $breakpoints: (
-  "xs": $screen-xs,
-  "sm": $screen-sm,
-  "md": $screen-md,
-  "lg": $screen-lg,
-  "xl": $screen-xl,
-  "xxl": $screen-xxl,
-  "k2": $screen-2k,
-  "k4": $screen-4k,
+  "xs": variables.$screen-xs,
+  "sm": variables.$screen-sm,
+  "md": variables.$screen-md,
+  "lg": variables.$screen-lg,
+  "xl": variables.$screen-xl,
+  "xxl": variables.$screen-xxl,
+  "k2": variables.$screen-2k,
+  "k4": variables.$screen-4k,
 );
 @mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
+  @if map.has-key($breakpoints, $width) {
+    $width: map.get($breakpoints, $width);
     @if $type == max {
       $width: $width - 1px;
     }

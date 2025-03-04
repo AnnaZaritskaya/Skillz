@@ -1,10 +1,16 @@
 export function loadRouteModule() {
-  const route = window.location.pathname;
+  const route = window.location.pathname.replace(/\/$/, '') || '/';
 
-  switch (route) {
-    case "/":
-      return import("./home.js");
-    default:
-      return Promise.reject(new Error("No module for this route"));
+  const routeMap = {
+    '/': () => import('./home.js'),
+  };
+
+  const loadModule = routeMap[route];
+  if (loadModule) {
+    return loadModule();
   }
+
+  return import('./404.js').catch(() => {
+    return Promise.reject(new Error(`No module for route: ${route}`));
+  });
 }
