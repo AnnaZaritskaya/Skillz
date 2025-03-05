@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+
+// Блок: banner
+.banner {
+    background-color: #57d9a6;
+    padding: 8px;
+
+    &__txt {
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        color: #1c1c33;
+    }
+}

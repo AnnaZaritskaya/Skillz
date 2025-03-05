@@ -1,0 +1,25 @@
+@use "../mixins" as *;
+
+// Блок: menu
+.menu {
+    display: inline-flex;
+    list-style: none;
+
+    &__item {
+        &:not(:last-child) {
+          margin-right: 36px;
+        }
+    }
+    &__link {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 159%;
+        color: #f6f6f8;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
