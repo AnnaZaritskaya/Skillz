@@ -1,0 +1,30 @@
+@use "../mixins" as *;
+
+// Блок: content-block
+.content-block {
+    $block: &;
+
+    &__title {
+        margin-bottom: 69px;
+    }
+
+    &__txt {
+        font-family: var(--font-family);
+        font-size: 22px;
+        line-height: 1.5;
+        color: #4e4e65;
+        margin-bottom: 46px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--light {
+        & #{$block}__txt {
+            color: #f6f6f8;
+        }
+
+    }
+
+}

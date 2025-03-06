@@ -1,0 +1,80 @@
+@use "../mixins" as *;
+
+// Блок: card
+.card {
+    $block: &;
+
+
+    max-width: 392px;
+    background-color: #fff;
+
+    &__top {
+        height: 196px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    &__bottom {
+        min-height: 224px;
+        padding: 22px 24px 30px 24px;
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-size: 17px;
+        line-height: 1.59;
+        color: #4e4e65;
+        margin-bottom: 22px;
+    }
+
+    &__txt {
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.5;
+        color: #4e4e65;
+    }
+
+    &__price {
+        font-family: var(--font-family);
+        font-size: 22px;
+        line-height: 1.23;
+        color: #b2b2bf;
+        margin-bottom: 16px;
+
+        & span {
+            &:first-child {
+                margin-right: 8px;
+            }
+
+            &:last-child {
+                color: #1c1c33;
+            }
+        }
+    }
+
+    &__link {
+        font-family: var(--font-family);
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #57d9a6;
+        text-decoration: none;
+    }
+
+    &__title {
+        & + #{$block}__txt {
+            margin-top: 11px;
+        }
+
+        & + #{$block}__subtitle {
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+    }
+}

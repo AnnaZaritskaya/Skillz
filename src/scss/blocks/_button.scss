@@ -1,0 +1,26 @@
+@use "../mixins" as *;
+
+// Блок: button
+.button {
+    display: inline-flex;
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1c1c33;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    background: #57d9a6;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &--dark {
+        color: #57d9a6;
+        background: #1c1c33;
+    }
+}
