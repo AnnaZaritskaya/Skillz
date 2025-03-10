@@ -1,0 +1,49 @@
+@use "../mixins" as *;
+
+// Блок: review
+.review {
+    &__rating {
+        display: flex;
+        flex-direction: row-reverse; /* Звезды идут справа налево */
+        justify-content: center;
+        margin-bottom: 45px;
+
+        input {
+            display: none; /* Скрываем радиокнопки */
+
+            &:checked ~ .review__star {
+                color: #1c1c33; /* Цвет активных звезд */
+            }
+        }
+    }
+
+    &__star {
+        cursor: pointer;
+        font-size: 36px;
+        color: #ccc; /* Цвет неактивных звезд */
+        transition: color 0.2s;
+
+        &:hover,
+        &:hover ~ .review__star {
+            color: #1c1c33; /* Цвет при наведении */
+        }
+    }
+
+    &__content {
+        font-family: var(--font-family);
+        font-style: italic;
+        font-size: 28px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 37px;
+        color: #1c1c33;
+    }
+
+    &__author {
+        font-family: var(--font-family);
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        color: #4e4e65;
+    }
+}

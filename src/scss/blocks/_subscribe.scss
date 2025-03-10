@@ -1,0 +1,58 @@
+@use "../mixins" as *;
+
+// Блок: subscribe
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 347px;
+    background-color: #57d9a6;
+
+    &__title {
+        margin-bottom: 57px;
+    }
+
+    &__input {
+        width: 400px;
+        height: 64px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 2.64;
+        text-transform: uppercase;
+        color: #1c1c33;
+        padding-left: 19px;
+        border-radius: 4px;
+        border: 1px solid #1c1c33;
+        background-color: transparent;
+        margin-right: 16px;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 2.64;
+            text-transform: uppercase;
+            color: #1c1c33;
+        }
+
+        &:-webkit-autofill {
+            background-color: transparent !important;
+            color: #1c1c33 !important; /* Цвет текста */
+            -webkit-text-fill-color: #1c1c33 !important; /* Цвет текста для WebKit */
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            transition: background-color 5000s ease-in-out 0s; /* "Обход" для Chrome */
+        }
+    }
+
+    &__button {
+        padding-top: 19px;
+        padding-bottom: 18px;
+    }
+}
