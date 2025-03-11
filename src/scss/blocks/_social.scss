@@ -1,0 +1,62 @@
+@use "../mixins" as *;
+
+// Блок: social
+.social {
+    $block: &;
+    
+    display: flex;
+    list-style: none;
+
+    &__item {
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #f6f6f8;
+
+        &:hover {
+            background: #57D9A6;
+
+            & #{$block}__icon {
+                fill: #f6f6f8;
+            }
+        }
+    }
+
+    &__icon {
+        fill: #1c1c33;
+
+        &--tiktok {
+            width: 21px;
+            height: 24px;
+        }
+
+        &--inst {
+            width: 24px;
+            height: 24px;
+        }
+
+        &--youtube {
+            width: 24px;
+            height: 17px;
+        }
+
+        &--meta {
+            width: 11px;
+            height: 24px;
+        }
+
+        &--x {
+            width: 24px;
+            height: 20px;
+        }
+    }
+}
