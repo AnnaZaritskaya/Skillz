@@ -4,7 +4,6 @@
 .card {
     $block: &;
 
-
     max-width: 392px;
     background-color: #fff;
 
@@ -17,7 +16,6 @@
         height: 100%;
         object-fit: cover;
     }
-
 
     &__bottom {
         min-height: 224px;
@@ -37,6 +35,11 @@
         font-size: 18px;
         line-height: 1.5;
         color: #4e4e65;
+
+        & + #{$block}__link {
+            display: inline-block;
+            margin-top: 28px;
+        }
     }
 
     &__price {
@@ -75,6 +78,31 @@
         & + #{$block}__subtitle {
             margin-top: 8px;
             margin-bottom: 15px;
+        }
+
+        & + #{$block}__link {
+            margin-top: 28px;
+        }
+    }
+
+    @at-root .course-offer & {
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+    }
+
+    @at-root .free & {
+        border: 1px solid #e4e4e5;
+
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+    }
+
+    @at-root .articles & {
+        &:not(:last-child) {
+            border: 1px solid #e4e4e5;
+            margin-right: 49px;
         }
     }
 }

@@ -1,0 +1,22 @@
+@use '../mixins' as *;
+
+// Блок: articles
+.articles {
+    background-color: #F5F5F5;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content-block {
+        max-width: 644px;
+        margin-bottom: 80px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}

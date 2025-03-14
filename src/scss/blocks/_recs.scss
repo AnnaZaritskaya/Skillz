@@ -1,0 +1,18 @@
+@use '../mixins' as *;
+
+// Блок: recs
+.recs {
+    background: #1C1C33 url(../../src/img/woman.jpg) no-repeat;
+    background-position: 0 50%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    &__content-block {
+        width: 100%;
+        max-width: 618px;
+        padding: 142px 0 144px 48px;
+    }
+}

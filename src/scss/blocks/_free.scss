@@ -1,0 +1,23 @@
+@use '../mixins' as *;
+
+// Блок: free
+.free {
+    background-color: #F5F5F5;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content-block {
+        max-width: 646px;
+        margin-bottom: 80px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}

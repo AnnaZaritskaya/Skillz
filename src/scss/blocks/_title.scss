@@ -65,5 +65,11 @@ $color-dark: #1c1c33;
                 transform: translateX(-50%);
             }
         }
+
+        &#{$block}--line-min {
+            &::after {
+                bottom: -7px;
+            }
+        }
     }
 }

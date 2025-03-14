@@ -1,0 +1,10 @@
+@use '../mixins' as *;
+
+// Блок: reviews
+.reviews {
+    background-color: #57D9A6;
+    
+    &__wrapper {
+        max-width: 1020px;
+    }
+}

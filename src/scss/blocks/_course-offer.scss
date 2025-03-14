@@ -1,0 +1,23 @@
+@use "../mixins" as *;
+
+// Блок: course-offer
+.course-offer {
+    background-color: #23233b;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 680px;
+        margin-bottom: 80px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}

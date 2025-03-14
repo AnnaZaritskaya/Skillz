@@ -1,6 +1,12 @@
-@use '../mixins' as *;
+@use "../mixins" as *;
 
 // Блок: header
 .header {
+    background-color: #1c1c33;
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
